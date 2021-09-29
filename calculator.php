@@ -11,10 +11,11 @@
     <meta charset="UTF-8">
     <title>Calculator</title>
 </head>
+
 <body>
     <h1>Addition Only Calculator</h1>
 
-<!-- Form that can accept 2 numbers -->
+    <!-- Form that accepts 2 numbers -->
     <form action='' method="post">
         <label for="first">First Number</label>
         <input type="number" name="first" id="first" required><br> 
@@ -26,21 +27,19 @@
     </form>
 
 <?php 
-
-    // Retrieve input values 'first' and 'second' from $_POST 
-    // Assign to variables $first and $second
+    // Retrieve input values 'first' and 'second' from $_POST
+    //Assign to variables $first and $second
     if(isset($_POST['first'], $_POST['second'])) {
         $first = $_POST['first'];
         $second = $_POST['second'];
     }
 
-    // Calculate the sum of the two numbers
+    // Calculate the sum of $first and $second
     $sum = $first + $second;
 
     // Display the calculation results
     print "<h3>Result:</h3>
     <p>$first + $second = $sum</p>";
-    
 ?>
 </body>
 </html>
